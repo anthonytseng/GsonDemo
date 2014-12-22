@@ -14,14 +14,15 @@ import java.util.List;
  */
 public class EmployeesParser {
 
-    public List<Employees> jsonToObject(String json){
-        List<Employees> employees  = new ArrayList<Employees>();
+    public List<Employees> jsonToObject(String json) {
+        List<Employees> employees = new ArrayList<Employees>();
         Gson gson = new Gson();
-        Type type = new TypeToken<List<Employees>>(){}.getType();
-        try{
+        Type type = new TypeToken<List<Employees>>() {
+        }.getType();
+        try {
             employees = gson.fromJson(json, type);
             return employees;
-        }catch (Exception e){
+        } catch (Exception e) {
             Log.e("EmployeesParser", e.toString());
         }
         return employees;

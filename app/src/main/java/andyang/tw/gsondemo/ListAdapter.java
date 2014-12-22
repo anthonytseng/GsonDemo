@@ -12,7 +12,7 @@ import java.util.List;
 /**
  * Created by andyang on 14/12/20.
  */
-public class ListAdapter extends BaseAdapter{
+public class ListAdapter extends BaseAdapter {
 
     private Context context;
     private LayoutInflater inflater;
@@ -44,13 +44,13 @@ public class ListAdapter extends BaseAdapter{
 
         ViewHolder holder;
 
-        if(convertView == null){
+        if (convertView == null) {
             holder = new ViewHolder();
             convertView = inflater.inflate(R.layout.listitems, null);
             holder.firstName = (TextView) convertView.findViewById(R.id.tv_first_name);
             holder.lastName = (TextView) convertView.findViewById(R.id.tv_last_name);
             convertView.setTag(holder);
-        }else{
+        } else {
             holder = (ViewHolder) convertView.getTag();
         }
 
@@ -60,7 +60,7 @@ public class ListAdapter extends BaseAdapter{
         return convertView;
     }
 
-    class ViewHolder{
+    class ViewHolder {
         TextView firstName;
         TextView lastName;
     }

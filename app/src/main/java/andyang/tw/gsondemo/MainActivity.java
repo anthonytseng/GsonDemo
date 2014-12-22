@@ -25,21 +25,20 @@ public class MainActivity extends ActionBarActivity {
         String json = getAssetJson();
         parser = new EmployeesParser();
         employeeses = parser.jsonToObject(json);
-        adapter = new ListAdapter(getApplicationContext(),employeeses);
+        adapter = new ListAdapter(getApplicationContext(), employeeses);
         lv.setAdapter(adapter);
     }
 
-    public String getAssetJson(){
+    public String getAssetJson() {
         try {
             InputStream stream = getAssets().open("employeesJson.json");
-
             int size = stream.available();
             byte[] buffer = new byte[size];
             stream.read(buffer);
             stream.close();
             String json = new String(buffer);
-            return  json;
-        } catch (Exception e){
+            return json;
+        } catch (Exception e) {
             Log.e(TAG, e.toString());
         }
         return "";
