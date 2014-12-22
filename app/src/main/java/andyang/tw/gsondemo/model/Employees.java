@@ -1,4 +1,4 @@
-package andyang.tw.gsondemo;
+package andyang.tw.gsondemo.model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -28,7 +28,4 @@ public class Employees {
         this.lastName = lastName;
     }
 
-    class aaa {
-
-    }
 }
