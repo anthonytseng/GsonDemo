@@ -1,4 +1,4 @@
-package andyang.tw.gsondemo;
+package andyang.tw.gsondemo.model;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -7,8 +7,10 @@ import com.google.gson.annotations.SerializedName;
  */
 public class Employees {
 
-    @SerializedName("firstName") String firstName;
-    @SerializedName("lastName") String lastName;
+    @SerializedName("firstName")
+    String firstName;
+    @SerializedName("lastName")
+    String lastName;
 
     public String getFirstName() {
         return firstName;
@@ -25,4 +27,5 @@ public class Employees {
     public void setLastName(String lastName) {
         this.lastName = lastName;
     }
+
 }
